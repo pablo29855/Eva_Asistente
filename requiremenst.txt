@@ -1,0 +1,7 @@
+unidecode
+pywhatkit
+pyautogui
+pyaudio
+win10toast
+speechrecognition
+pyttsx3
