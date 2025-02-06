@@ -54,9 +54,13 @@ def run():
             if(val.split()[0]=="minecraft"):
                 datos.talk("iniciando "+val)
                 os.system(datos.ruta)
-            elif(val.split()[0]=="whatsapp" and val.split()[1]=="web"):
-                datos.talk("abriendo whatsapp web")   
-                web.open(datos.web)
+            elif val.split()[0] == "whatsapp":
+                if len(val.split()) > 1 and val.split()[1] == "web":
+                    datos.talk("abriendo whatsapp web")
+                    web.open(datos.web)
+                else:
+                    datos.talk("abriendo "+val)
+                    datos.open_aplication(unidecode(val))    
             elif(val.split()[0]=="youtube"):
                 datos.talk("abriendo youtube")
                 web.open(datos.webYt)
